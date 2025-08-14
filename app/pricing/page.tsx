@@ -43,16 +43,14 @@ export default function PricingPage() {
               className="mt-4 text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.05] reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700"
               data-delay="180"
             >
-              Donnez un coup de neuf à votre présence en ligne
+              Votre site web, fait sur mesure
             </h1>
             <p
               className="mt-4 text-base sm:text-lg text-zinc-700 reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700"
               data-delay="240"
             >
-              Que vous partiez de zéro ou que vous souhaitiez moderniser votre
-              site actuel, nos offres sont conçues pour s’adapter à vos besoins.
-              Chaque formule inclut la possibilité de refonte, pour un site
-              clair, fonctionnel et à votre image.
+              On écoute vos besoins et on crée un site qui vous ressemble.
+              Simple, efficace et à votre image.
             </p>
           </div>
 
@@ -96,9 +94,8 @@ export default function PricingPage() {
                 </div>
                 <div className="text-right">
                   <div className="flex items-center justify-end gap-1">
-                    <Euro className="h-4.5 w-4.5 text-zinc-800" />
                     <span className="text-3xl font-semibold tracking-tight text-zinc-900">
-                      250
+                      250 €
                     </span>
                   </div>
                   <p className="text-xs text-zinc-500 mt-1">
@@ -109,7 +106,7 @@ export default function PricingPage() {
 
               <div className="mt-5 h-px bg-zinc-100" />
 
-              <ul className="mt-5 space-y-2.5">
+              {/* <ul className="mt-5 space-y-2.5">
                 <li className="flex items-start gap-2.5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +118,7 @@ export default function PricingPage() {
                     <CheckCircle2Icon />
                   </span>
                 </li>
-              </ul>
+              </ul> */}
 
               <ul className="mt-5 space-y-2.5">
                 <li className="flex items-start gap-2.5">
@@ -189,9 +186,8 @@ export default function PricingPage() {
                 </div>
                 <div className="text-right">
                   <div className="flex items-center justify-end gap-1">
-                    <Euro className="h-4.5 w-4.5 text-zinc-50" />
                     <span className="text-3xl font-semibold tracking-tight">
-                      450
+                      450 €
                     </span>
                   </div>
                   <p className="text-xs text-zinc-400 mt-1">
@@ -261,15 +257,9 @@ export default function PricingPage() {
                   </h3>
                 </div>
                 <div className="text-right">
-                  <div className="flex items-center justify-end gap-1">
-                    <Euro className="h-4.5 w-4.5 text-zinc-800" />
-                    <span className="text-sm font-medium tracking-tight text-zinc-600">
-                      à partir de
-                    </span>
-                  </div>
                   <div className="flex items-baseline justify-end gap-1">
                     <span className="text-3xl font-semibold tracking-tight text-zinc-900">
-                      800
+                      800 €
                     </span>
                   </div>
                   <p className="text-xs text-zinc-500 mt-1">

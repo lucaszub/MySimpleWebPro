@@ -120,13 +120,16 @@ export default function HowItWorks() {
                     </h3>
                     <ul className="mt-3 space-y-1 text-sm text-zinc-600">
                       <li>
-                        Offre standard : 250 € → site complet jusqu'à 5 pages
-                        (Accueil, Services/Produits, À propos, Contact + 1 page
-                        si nécessaire).
+                        <strong>Essentiel : 250 €</strong> — Site 1 page pour
+                        présenter votre activité simplement.
                       </li>
                       <li>
-                        Besoins spécifiques ou pages supplémentaires →
-                        contactez‑nous pour un devis sur mesure.
+                        <strong>Le plus populaire : 450 €</strong> — Site 3
+                        pages avec design personnalisé.
+                      </li>
+                      <li>
+                        <strong>Évolutif : à partir de 800 €</strong> — Site
+                        sur-mesure avec CMS et fonctionnalités avancées.
                       </li>
                     </ul>
                   </div>
@@ -148,7 +151,7 @@ export default function HowItWorks() {
                         />
                         <div className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs ring-1 bg-white/80 backdrop-blur text-zinc-800 ring-zinc-200">
                           <Banknote className="h-3.5 w-3.5 text-emerald-500" />
-                          Offre standard · 250 €
+                          Essentiel · 250 €
                         </div>
                       </div>
                       <div className="p-4">

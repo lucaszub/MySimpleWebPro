@@ -11,6 +11,7 @@ import {
   Camera,
   ArrowRight,
 } from "lucide-react";
+import Badge from "./Badge";
 import { useEffect, useRef } from "react";
 
 export default function Hero() {
@@ -98,25 +99,15 @@ export default function Hero() {
             data-delay="360"
             ref={setHeroRef(3)}
           >
-            <span className="rounded-full border px-3 py-1.5 text-sm font-medium bg-blue-50 text-blue-700 border-blue-200 animate-float-slow hover:scale-105 transition-transform duration-300">
-              Artisan
-            </span>
+            <Badge animation="slow">Artisan</Badge>
 
-            <span className="rounded-full border px-3 py-1.5 text-sm font-medium bg-purple-50 text-purple-700 border-purple-200 animate-float-medium hover:scale-105 transition-transform duration-300">
-              Freelance
-            </span>
+            <Badge animation="medium">Freelance</Badge>
 
-            <span className="rounded-full border px-3 py-1.5 text-sm font-medium bg-green-50 text-green-700 border-green-200 animate-float-fast hover:scale-105 transition-transform duration-300">
-              Boutique locale
-            </span>
+            <Badge animation="fast">Boutique locale</Badge>
 
-            <span className="rounded-full border px-3 py-1.5 text-sm font-medium bg-pink-50 text-pink-700 border-pink-200 animate-float-slow-delayed hover:scale-105 transition-transform duration-300">
-              Santé & bien-être
-            </span>
+            <Badge animation="slow-delayed">Santé & bien-être</Badge>
 
-            <span className="rounded-full border px-3 py-1.5 text-sm font-medium bg-orange-50 text-orange-700 border-orange-200 animate-float-slow hover:scale-105 transition-transform duration-300">
-              Association / événement
-            </span>
+            <Badge animation="slow">Association / événement</Badge>
           </div>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center gap-3">
@@ -144,15 +135,15 @@ export default function Hero() {
 
         {/* Right: Collage */}
         <div className="md:col-span-6">
-          <div className="relative h-[28rem] sm:h-[32rem] lg:h-[36rem]">
+          <div className="relative h-[34rem] sm:h-[40rem] lg:h-[44rem]">
             {/* Card A */}
-            <div className="group absolute left-0 top-6 w-[72%] md:w-[64%] lg:w-[58%] rotate-[-4deg]">
+            <div className="group md:absolute z-30 left-0 md:top-4 w-full md:w-[64%] lg:w-[58%] md:rotate-[-3deg] mb-4">
               <div
                 className="reveal opacity-0 translate-y-6 blur-sm transition-all duration-700"
                 data-delay="300"
                 ref={setHeroRef(9)}
               >
-                <div className="rounded-2xl shadow-xl ring-1 overflow-hidden hover:-translate-y-1 hover:rotate-0 transition-transform duration-500 bg-white ring-black/5">
+                <div className="rounded-2xl bg-white shadow-xl ring-1 ring-black/5 overflow-hidden hover:-translate-y-1 hover:rotate-0 transition-transform duration-500">
                   <img
                     alt="Rendu de produit minimaliste"
                     src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?w=1080&q=80"
@@ -174,16 +165,16 @@ export default function Hero() {
             </div>
 
             {/* Card B */}
-            <div className="group absolute right-2 top-0 w-[66%] md:w-[60%] lg:w-[54%] rotate-[3deg]">
+            <div className="group md:absolute z-20 right-2 md:top-28 w-full md:w-[58%] lg:w-[52%] md:rotate-[3deg] mt-4">
               <div
                 className="reveal opacity-0 -translate-y-6 blur-sm transition-all duration-700"
                 data-delay="380"
                 ref={setHeroRef(10)}
               >
-                <div className="rounded-2xl shadow-xl ring-1 overflow-hidden hover:-translate-y-1 hover:rotate-0 transition-transform duration-500 bg-white ring-black/5">
+                <div className="rounded-2xl bg-white shadow-xl ring-1 ring-black/5 overflow-hidden hover:-translate-y-1 hover:rotate-0 transition-transform duration-500">
                   <img
                     alt="Paysage de montagne"
-                    src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=80"
+                    src="https://images.unsplash.com/photo-1642615835477-d303d7dc9ee9?w=1080&q=80"
                     className="h-48 sm:h-56 w-full object-cover"
                   />
                   <div className="p-4">
@@ -194,7 +185,7 @@ export default function Hero() {
                       </p>
                     </div>
                     <p className="mt-1 text-sm text-zinc-600">
-                      Constructions évolutives prêtes pour la croissance PME.
+                      Constructions évolutives pour PME.
                     </p>
                   </div>
                 </div>
@@ -202,13 +193,13 @@ export default function Hero() {
             </div>
 
             {/* Card C */}
-            <div className="group absolute left-6 bottom-6 w-[62%] md:w-[56%] lg:w-[50%] rotate-[2deg]">
+            <div className="group md:absolute z-10 left-6 md:bottom-36 w-full md:w-[56%] lg:w-[50%] md:rotate-[2deg] mt-4">
               <div
                 className="reveal opacity-0 translate-y-6 blur-sm transition-all duration-700"
                 data-delay="460"
                 ref={setHeroRef(11)}
               >
-                <div className="rounded-2xl shadow-xl ring-1 overflow-hidden hover:-translate-y-1 hover:rotate-0 transition-transform duration-500 bg-white ring-black/5">
+                <div className="rounded-2xl bg-white shadow-xl ring-1 ring-black/5 overflow-hidden hover:-translate-y-1 hover:rotate-0 transition-transform duration-500">
                   <img
                     alt="Intérieur minimaliste"
                     src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=80"
@@ -230,16 +221,16 @@ export default function Hero() {
             </div>
 
             {/* Card D */}
-            <div className="group absolute right-0 bottom-0 w-[58%] md:w-[52%] lg:w-[46%] -rotate-2">
+            <div className="group md:absolute z-40 right-0 md:bottom-0 w-full md:w-[52%] lg:w-[46%] md:-rotate-2 mt-4">
               <div
                 className="reveal opacity-0 translate-y-6 blur-sm transition-all duration-700"
                 data-delay="520"
                 ref={setHeroRef(12)}
               >
-                <div className="rounded-2xl shadow-xl ring-1 overflow-hidden hover:-translate-y-1 hover:rotate-0 transition-transform duration-500 bg-white ring-black/5">
+                <div className="rounded-2xl bg-white shadow-xl ring-1 ring-black/5 overflow-hidden hover:-translate-y-1 hover:rotate-0 transition-transform duration-500">
                   <img
                     alt="Photographie de portrait"
-                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80"
+                    src="https://images.unsplash.com/photo-1635151227785-429f420c6b9d?w=1080&q=80"
                     className="h-40 sm:h-48 w-full object-cover"
                   />
                   <div className="p-4">
@@ -259,7 +250,7 @@ export default function Hero() {
 
             {/* Accent ring */}
             <div className="pointer-events-none absolute inset-0 -z-10">
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 rounded-full bg-gradient-to-tr blur-2xl from-emerald-300/30 to-sky-300/30"></div>
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 rounded-full bg-gradient-to-tr from-emerald-300/30 to-sky-300/30 blur-2xl"></div>
             </div>
           </div>
         </div>
