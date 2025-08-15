@@ -57,9 +57,9 @@ export default function Hero() {
 
   return (
     <main className="mx-auto max-w-7xl px-6 lg:px-8">
-      <section className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 items-center py-10 lg:py-20">
+      <section className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 items-center pt-8 pb-10 lg:pt-40 lg:pb-20">
         {/* Left: Copy */}
-        <div className="md:col-span-6">
+        <div className="col-span-1 md:col-span-6">
           <div
             className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs backdrop-blur reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 border-zinc-200 bg-white/70 text-zinc-600"
             data-delay="150"
@@ -134,10 +134,10 @@ export default function Hero() {
         </div>
 
         {/* Right: Collage */}
-        <div className="md:col-span-6">
+        <div className="hidden md:block md:col-span-6">
           <div className="relative h-[34rem] sm:h-[40rem] lg:h-[44rem]">
             {/* Card A */}
-            <div className="group md:absolute z-30 left-0 md:top-4 w-full md:w-[64%] lg:w-[58%] md:rotate-[-3deg] mb-4">
+            <div className="group md:absolute z-30 left-0 md:top-4 w-full md:w-[64%] lg:w-[58%] md:rotate-[-3deg] mb-12 md:mb-4">
               <div
                 className="reveal opacity-0 translate-y-6 blur-sm transition-all duration-700"
                 data-delay="300"
@@ -152,11 +152,11 @@ export default function Hero() {
                   <div className="p-4">
                     <div className="flex items-center gap-2">
                       <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
-                      <p className="text-sm font-medium text-zinc-800">
+                      <p className="text-sm font-medium text-zinc-800 md:block hidden">
                         Interface propre et fiable
                       </p>
                     </div>
-                    <p className="mt-1 text-sm text-zinc-600">
+                    <p className="mt-1 text-sm text-zinc-600 md:block hidden">
                       Espacement équilibré, ombres douces, typographie nette.
                     </p>
                   </div>
@@ -165,7 +165,7 @@ export default function Hero() {
             </div>
 
             {/* Card B */}
-            <div className="group md:absolute z-20 right-2 md:top-28 w-full md:w-[58%] lg:w-[52%] md:rotate-[3deg] mt-4">
+            <div className="group md:absolute z-20 right-2 md:top-28 w-full md:w-[58%] lg:w-[52%] md:rotate-[3deg] mt-12 md:mt-4">
               <div
                 className="reveal opacity-0 -translate-y-6 blur-sm transition-all duration-700"
                 data-delay="380"
@@ -180,11 +180,11 @@ export default function Hero() {
                   <div className="p-4">
                     <div className="flex items-center gap-2">
                       <Mountain className="h-4 w-4 text-emerald-400" />
-                      <p className="text-sm font-medium text-zinc-800">
+                      <p className="text-sm font-medium text-zinc-800 md:block hidden">
                         Fondations solides
                       </p>
                     </div>
-                    <p className="mt-1 text-sm text-zinc-600">
+                    <p className="mt-1 text-sm text-zinc-600 md:block hidden">
                       Constructions évolutives pour PME.
                     </p>
                   </div>
@@ -193,7 +193,7 @@ export default function Hero() {
             </div>
 
             {/* Card C */}
-            <div className="group md:absolute z-10 left-6 md:bottom-36 w-full md:w-[56%] lg:w-[50%] md:rotate-[2deg] mt-4">
+            <div className="group md:absolute z-10 left-6 md:bottom-36 w-full md:w-[56%] lg:w-[50%] md:rotate-[2deg] mt-12 md:mt-4">
               <div
                 className="reveal opacity-0 translate-y-6 blur-sm transition-all duration-700"
                 data-delay="460"
@@ -208,11 +208,11 @@ export default function Hero() {
                   <div className="p-4">
                     <div className="flex items-center gap-2">
                       <Layout className="h-4 w-4 text-emerald-400" />
-                      <p className="text-sm font-medium text-zinc-800">
+                      <p className="text-sm font-medium text-zinc-800 md:block hidden">
                         Structure minimaliste
                       </p>
                     </div>
-                    <p className="mt-1 text-sm text-zinc-600">
+                    <p className="mt-1 text-sm text-zinc-600 md:block hidden">
                       Pages axées sur le contenu avec une typographie nette.
                     </p>
                   </div>
@@ -221,7 +221,7 @@ export default function Hero() {
             </div>
 
             {/* Card D */}
-            <div className="group md:absolute z-40 right-0 md:bottom-0 w-full md:w-[52%] lg:w-[46%] md:-rotate-2 mt-4">
+            <div className="group md:absolute z-40 right-0 md:bottom-0 w-full md:w-[52%] lg:w-[46%] md:-rotate-2 mt-12 md:mt-4">
               <div
                 className="reveal opacity-0 translate-y-6 blur-sm transition-all duration-700"
                 data-delay="520"
@@ -236,11 +236,11 @@ export default function Hero() {
                   <div className="p-4">
                     <div className="flex items-center gap-2">
                       <Camera className="h-4 w-4 text-emerald-400" />
-                      <p className="text-sm font-medium text-zinc-800">
+                      <p className="text-sm font-medium text-zinc-800 md:block hidden">
                         Conçu pour les entrepreneurs
                       </p>
                     </div>
-                    <p className="mt-1 text-sm text-zinc-600">
+                    <p className="mt-1 text-sm text-zinc-600 md:block hidden">
                       Des photographes aux nutritionnistes et plus encore.
                     </p>
                   </div>
