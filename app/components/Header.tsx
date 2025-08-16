@@ -84,6 +84,7 @@ export default function Header() {
             Tarifs
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-zinc-900 transition-all duration-300 group-hover:w-full"></span>
           </Link>
+
           <Link
             href="/about"
             className="reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 font-medium text-zinc-700 hover:text-zinc-900 relative group hover:-translate-y-0.5"
@@ -94,24 +95,14 @@ export default function Header() {
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-zinc-900 transition-all duration-300 group-hover:w-full"></span>
           </Link>
 
-          <Link
-            href="/contact"
-            className="reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 font-medium text-zinc-700 hover:text-zinc-900 relative group hover:-translate-y-0.5"
-            data-delay="320"
-            ref={setNavRef(5)}
-          >
-            Contact
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-zinc-900 transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-
           <a
             href="/contact"
-            className="group reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 inline-flex items-center gap-2 rounded-full px-4 py-2 shadow-sm ring-1 hover:-translate-y-0.5 hover:shadow-md bg-zinc-900 text-zinc-50 ring-zinc-900/10"
+            className="group reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 inline-flex items-center gap-2 rounded-full px-4 py-2 shadow-sm ring-1 hover:-translate-y-0.5 hover:shadow-md bg-emerald-600 text-white ring-emerald-600/20"
             data-delay="350"
-            ref={setNavRef(6)}
+            ref={setNavRef(5)}
           >
-            <Calendar className="h-4 w-4 text-emerald-300" />
-            <span className="font-medium">Réserver un appel</span>
+            <Calendar className="h-4 w-4 text-emerald-100" />
+            <span className="font-medium">Appel gratuit</span>
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </a>
         </div>
@@ -135,8 +126,7 @@ export default function Header() {
         <div className="md:hidden fixed inset-0 z-50 bg-black/20 backdrop-blur-sm">
           <div className="absolute top-0 right-0 w-80 h-full bg-white shadow-2xl border-l border-zinc-200 transform transition-transform duration-300 ease-out">
             <div className="p-6">
-              <div className="flex items-center justify-between mb-8">
-                <h2 className="text-lg font-semibold text-zinc-900">Menu</h2>
+              <div className="flex items-center justify-end mb-8">
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="p-2 rounded-lg hover:bg-zinc-100 transition-colors duration-200"
@@ -152,14 +142,6 @@ export default function Header() {
                   className="block py-3 text-lg font-medium text-zinc-700 hover:text-zinc-900 border-b border-zinc-100 hover:border-zinc-300 transition-colors duration-200"
                 >
                   Accueil
-                </Link>
-
-                <Link
-                  href="/contact"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block py-3 text-lg font-medium text-zinc-700 hover:text-zinc-900 border-b border-zinc-100 hover:border-zinc-300 transition-colors duration-200"
-                >
-                  Contact
                 </Link>
 
                 <Link
@@ -183,10 +165,10 @@ export default function Header() {
                 <a
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="group inline-flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 shadow-sm ring-1 hover:-translate-y-0.5 hover:shadow-md bg-zinc-900 text-zinc-50 ring-zinc-900/10 transition-all duration-200"
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 shadow-sm ring-1 hover:-translate-y-0.5 hover:shadow-md bg-emerald-600 text-white ring-emerald-600/20 transition-all duration-200"
                 >
-                  <Calendar className="h-4 w-4 text-emerald-300" />
-                  <span className="font-medium">Réserver un appel</span>
+                  <Calendar className="h-4 w-4 text-emerald-100" />
+                  <span className="font-medium">Appel gratuit de 30 min</span>
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </a>
               </div>

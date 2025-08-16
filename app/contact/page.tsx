@@ -94,6 +94,17 @@ export default function ContactPage() {
               Dites‑nous ce dont vous avez besoin. Nous revenons vers vous sous
               1 à 2 jours ouvrés avec des pistes claires et un planning.
             </p>
+            <div
+              className="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-2 text-sm text-emerald-800 ring-1 ring-emerald-200 reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700"
+              data-delay="280"
+              ref={setContactRef(6)}
+            >
+              <CheckCircle className="h-4 w-4 text-emerald-600" />
+              <span className="font-medium">Appel de 30 min gratuit</span>
+              <span className="text-emerald-700">
+                • Plan d'action personnalisé
+              </span>
+            </div>
           </div>
 
           {/* Form and sidebar */}
@@ -287,7 +298,7 @@ export default function ContactPage() {
                     className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium bg-white ring-1 ring-inset ring-zinc-200 text-zinc-800 hover:bg-zinc-50 hover:-translate-y-0.5 hover:shadow-sm transition"
                   >
                     <Calendar className="h-4.5 w-4.5 text-emerald-500" />
-                    Réserver un call
+                    Réserver un call gratuit
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                   </a>
                   <p className="sm:ml-auto text-xs text-zinc-500 flex items-center gap-1.5">
@@ -342,6 +353,21 @@ export default function ContactPage() {
                       <span>Livraison clé en main + guide d'édition.</span>
                     </li>
                   </ul>
+
+                  <div className="mt-5 rounded-xl ring-1 p-4 bg-emerald-50 ring-emerald-200/60">
+                    <div className="flex items-start gap-3">
+                      <Calendar className="h-5 w-5 text-emerald-700" />
+                      <div>
+                        <p className="font-medium text-emerald-900">
+                          Appel gratuit de 30 min
+                        </p>
+                        <p className="text-sm text-emerald-800 mt-1">
+                          Plan d'action personnalisé • Pas d'engagement •
+                          Disponible cette semaine
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
                   <div className="mt-5 grid grid-cols-2 gap-3 text-xs">
                     <div className="rounded-xl ring-1 p-3 bg-zinc-50 ring-zinc-200">

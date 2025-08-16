@@ -10,6 +10,7 @@ import {
   Layout,
   Camera,
   ArrowRight,
+  Calendar,
 } from "lucide-react";
 import Badge from "./Badge";
 import { useEffect, useRef } from "react";
@@ -57,7 +58,7 @@ export default function Hero() {
 
   return (
     <main className="mx-auto max-w-7xl px-6 lg:px-8">
-      <section className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 items-center pt-8 pb-10 lg:pt-40 lg:pb-20">
+      <section className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 items-center pt-8 pb-10 lg:pt-30 lg:pb-20">
         {/* Left: Copy */}
         <div className="col-span-1 md:col-span-6">
           <div
@@ -112,23 +113,23 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-col sm:flex-row items-center gap-3">
             <a
-              href="#"
-              className="group reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 shadow-sm ring-1 hover:-translate-y-0.5 hover:shadow-lg bg-zinc-900 text-zinc-50 ring-zinc-900/10"
+              href="/contact"
+              className="group reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 shadow-sm ring-1 hover:-translate-y-0.5 hover:shadow-lg bg-emerald-600 text-white ring-emerald-600/20"
               data-delay="420"
               ref={setHeroRef(4)}
             >
-              <Bolt className="h-5 w-5 text-emerald-300" />
-              <span className="font-medium">Lancer mon site</span>
+              <Calendar className="h-5 w-5 text-emerald-100" />
+              <span className="font-medium">Appel gratuit de 30 min</span>
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
-              href="#"
+              href="/pricing"
               className="group reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 inline-flex items-center gap-2 rounded-xl px-5 py-3 ring-1 hover:-translate-y-0.5 hover:shadow-md bg-white text-zinc-900 ring-zinc-200"
               data-delay="460"
               ref={setHeroRef(5)}
             >
-              <CaseSensitive className="h-5 w-5 text-zinc-700" />
-              <span className="font-medium">Voir nos réalisations</span>
+              <Bolt className="h-5 w-5 text-zinc-700" />
+              <span className="font-medium">Voir nos tarifs</span>
             </a>
           </div>
         </div>
