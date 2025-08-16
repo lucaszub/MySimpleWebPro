@@ -139,8 +139,8 @@ export default function AboutHero() {
           <div className="rounded-2xl bg-white shadow-xl ring-1 ring-black/5 overflow-hidden hover:-translate-y-1 transition-transform duration-500">
             <img
               alt="Portrait du fondateur"
-              src="https://media.licdn.com/dms/image/v2/D4E03AQGZchFqp_v6oA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1730992298090?e=1758153600&v=beta&t=0IF1VqZSXXHHAHDcVN3NL5Zbz-WQ4dbQeaExtmrL8gk"
-              className="h-72 w-full object-cover object-[center_20%]"
+              src="/LucasZubiarrain.png"
+              className="w-full h-auto"
             />
             <div className="p-4">
               <div className="flex items-center justify-between">

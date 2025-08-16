@@ -76,22 +76,21 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/pricing"
-            className="reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 font-medium text-zinc-700 hover:text-zinc-900 relative group hover:-translate-y-0.5"
-            data-delay="250"
-            ref={setNavRef(3)}
-          >
-            Tarifs
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-zinc-900 transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-
-          <Link
             href="/about"
             className="reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 font-medium text-zinc-700 hover:text-zinc-900 relative group hover:-translate-y-0.5"
             data-delay="300"
             ref={setNavRef(4)}
           >
             À propos
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-zinc-900 transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          <Link
+            href="/pricing"
+            className="reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 font-medium text-zinc-700 hover:text-zinc-900 relative group hover:-translate-y-0.5"
+            data-delay="250"
+            ref={setNavRef(3)}
+          >
+            Tarifs
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-zinc-900 transition-all duration-300 group-hover:w-full"></span>
           </Link>
 
@@ -145,19 +144,18 @@ export default function Header() {
                 </Link>
 
                 <Link
-                  href="/pricing"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block py-3 text-lg font-medium text-zinc-700 hover:text-zinc-900 border-b border-zinc-100 hover:border-zinc-300 transition-colors duration-200"
-                >
-                  Tarifs
-                </Link>
-
-                <Link
                   href="/about"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block py-3 text-lg font-medium text-zinc-700 hover:text-zinc-900 border-b border-zinc-100 hover:border-zinc-300 transition-colors duration-200"
                 >
                   À propos
+                </Link>
+                <Link
+                  href="/pricing"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block py-3 text-lg font-medium text-zinc-700 hover:text-zinc-900 border-b border-zinc-100 hover:border-zinc-300 transition-colors duration-200"
+                >
+                  Tarifs
                 </Link>
               </nav>
 

@@ -208,7 +208,7 @@ export default function About() {
                   <img
                     src="/LucasZubiarrain.png"
                     alt="Lucas Zubiarrain"
-                    className="h-14 w-14 rounded-full object-cover ring-2 ring-white shadow-sm"
+                    className="h-14 w-14 rounded-full object-contain ring-2 ring-white shadow-sm"
                   />
                   <div className="min-w-0">
                     <p className="text-xl font-semibold tracking-tight text-zinc-900">
