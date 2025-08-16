@@ -4,10 +4,6 @@ import {
   User,
   Bolt,
   Mail,
-  Clock,
-  MapPin,
-  Gauge,
-  Wallet,
   IdCard,
   ShieldCheck,
   ArrowRight,
@@ -130,7 +126,7 @@ export default function AboutHero() {
       </div>
 
       {/* Portrait / Card */}
-      <div className="md:col-span-5">
+      <div className="md:col-span-4">
         <div
           className="reveal opacity-0 translate-y-6 transition-all duration-700"
           data-delay="220"
