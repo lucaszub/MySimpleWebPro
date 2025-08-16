@@ -113,7 +113,9 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-col sm:flex-row items-center gap-3">
             <a
-              href="/contact"
+              href="https://cal.com/lucaszubiarrain/30min?overlayCalendar=true"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 shadow-sm ring-1 hover:-translate-y-0.5 hover:shadow-lg bg-emerald-600 text-white ring-emerald-600/20"
               data-delay="420"
               ref={setHeroRef(4)}

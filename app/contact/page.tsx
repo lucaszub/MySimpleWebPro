@@ -382,7 +382,9 @@ export default function ContactPage() {
                     )}
                   </button>
                   <a
-                    href="#"
+                    href="https://cal.com/lucaszubiarrain/30min?overlayCalendar=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium bg-white ring-1 ring-inset ring-zinc-200 text-zinc-800 hover:bg-zinc-50 hover:-translate-y-0.5 hover:shadow-sm transition"
                   >
                     <Calendar className="h-4.5 w-4.5 text-emerald-500" />
@@ -453,6 +455,15 @@ export default function ContactPage() {
                           Plan d'action personnalisé • Pas d'engagement •
                           Disponible cette semaine
                         </p>
+                        <a
+                          href="https://cal.com/lucaszubiarrain/30min?overlayCalendar=true"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-3 inline-flex items-center gap-2 rounded-lg bg-emerald-600 text-white px-3 py-2 text-sm font-medium hover:bg-emerald-700 transition-colors"
+                        >
+                          <Calendar className="h-4 w-4" />
+                          Réserver maintenant
+                        </a>
                       </div>
                     </div>
                   </div>

@@ -386,14 +386,16 @@ export default function PricingPage() {
               </div>
               <div className="flex items-center gap-2">
                 <a
-                  href="#"
+                  href="https://cal.com/lucaszubiarrain/30min?overlayCalendar=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center gap-1.5 rounded-xl px-4 py-2 text-sm shadow-sm ring-1 hover:-translate-y-0.5 hover:shadow-lg bg-zinc-900 text-zinc-50 ring-zinc-900/10"
                 >
                   <span className="font-medium">Réserver un appel</span>
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 text-emerald-300" />
                 </a>
                 <a
-                  href="#"
+                  href="/contact"
                   className="group inline-flex items-center gap-1.5 rounded-xl px-4 py-2 text-sm ring-1 hover:-translate-y-0.5 hover:shadow-md bg-white ring-zinc-200"
                 >
                   <FileText className="h-4 w-4 text-zinc-700" />

@@ -78,8 +78,8 @@ export default function Header() {
           <Link
             href="/about"
             className="reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 font-medium text-zinc-700 hover:text-zinc-900 relative group hover:-translate-y-0.5"
-            data-delay="300"
-            ref={setNavRef(4)}
+            data-delay="200"
+            ref={setNavRef(2)}
           >
             À propos
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-zinc-900 transition-all duration-300 group-hover:w-full"></span>
@@ -94,8 +94,20 @@ export default function Header() {
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-zinc-900 transition-all duration-300 group-hover:w-full"></span>
           </Link>
 
-          <a
+          <Link
             href="/contact"
+            className="reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 font-medium text-zinc-700 hover:text-zinc-900 relative group hover:-translate-y-0.5"
+            data-delay="300"
+            ref={setNavRef(4)}
+          >
+            Contact
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-zinc-900 transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+
+          <a
+            href="https://cal.com/lucaszubiarrain/30min?overlayCalendar=true"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 inline-flex items-center gap-2 rounded-full px-4 py-2 shadow-sm ring-1 hover:-translate-y-0.5 hover:shadow-md bg-emerald-600 text-white ring-emerald-600/20"
             data-delay="350"
             ref={setNavRef(5)}
@@ -157,12 +169,20 @@ export default function Header() {
                 >
                   Tarifs
                 </Link>
+                <Link
+                  href="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block py-3 text-lg font-medium text-zinc-700 hover:text-zinc-900 border-b border-zinc-100 hover:border-zinc-300 transition-colors duration-200"
+                >
+                  Contact
+                </Link>
               </nav>
 
               <div className="mt-8 pt-6 border-t border-zinc-200">
                 <a
-                  href="/contact"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  href="https://cal.com/lucaszubiarrain/30min?overlayCalendar=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 shadow-sm ring-1 hover:-translate-y-0.5 hover:shadow-md bg-emerald-600 text-white ring-emerald-600/20 transition-all duration-200"
                 >
                   <Calendar className="h-4 w-4 text-emerald-100" />
