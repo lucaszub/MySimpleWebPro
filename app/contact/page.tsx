@@ -14,12 +14,17 @@ import {
   Info,
   FileText,
 } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function ContactPage() {
   const contactRefs = useRef<(HTMLElement | null)[]>([]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+  const [submitMessage, setSubmitMessage] = useState("");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -57,6 +62,61 @@ export default function ContactPage() {
 
   const setContactRef = (index: number) => (el: HTMLElement | null) => {
     contactRefs.current[index] = el;
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+    setSubmitMessage("");
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
+      message: formData.get("details") as string,
+    };
+
+    try {
+      console.log("📤 Envoi des données:", data);
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      console.log("📥 Réponse reçue:", response.status, response.statusText);
+
+      const result = await response.json();
+      console.log("📋 Contenu de la réponse:", result);
+
+      if (response.ok) {
+        console.log("✅ Succès - Mise à jour du statut");
+        setSubmitStatus("success");
+        setSubmitMessage(
+          "Message envoyé avec succès ! Nous vous recontacterons sous 1-2 jours."
+        );
+        // Réinitialiser le formulaire de manière sûre
+        const form = e.currentTarget;
+        if (form) {
+          form.reset();
+        }
+      } else {
+        console.log("❌ Erreur - Mise à jour du statut");
+        setSubmitStatus("error");
+        setSubmitMessage(result.error || "Erreur lors de l'envoi du message.");
+      }
+    } catch (error) {
+      console.error("💥 Erreur de connexion:", error);
+      setSubmitStatus("error");
+      setSubmitMessage("Erreur de connexion. Veuillez réessayer.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -116,8 +176,7 @@ export default function ContactPage() {
               ref={setContactRef(3)}
             >
               <form
-                action="#"
-                method="post"
+                onSubmit={handleSubmit}
                 className="rounded-2xl ring-1 p-6 sm:p-7 bg-white ring-zinc-200"
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -284,14 +343,43 @@ export default function ContactPage() {
                   </label>
                 </div>
 
+                {/* Messages de statut */}
+                {submitStatus === "success" && (
+                  <div className="mt-4 p-4 rounded-xl bg-emerald-50 ring-1 ring-emerald-200 text-emerald-800">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-5 w-5 text-emerald-600" />
+                      <span className="font-medium">{submitMessage}</span>
+                    </div>
+                  </div>
+                )}
+
+                {submitStatus === "error" && (
+                  <div className="mt-4 p-4 rounded-xl bg-red-50 ring-1 ring-red-200 text-red-800">
+                    <div className="flex items-center gap-2">
+                      <Info className="h-5 w-5 text-red-600" />
+                      <span className="font-medium">{submitMessage}</span>
+                    </div>
+                  </div>
+                )}
+
                 {/* Actions */}
                 <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <button
                     type="submit"
-                    className="group inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium bg-emerald-600 text-white shadow-sm ring-1 ring-emerald-600/20 hover:bg-emerald-700 hover:-translate-y-0.5 hover:shadow-md transition"
+                    disabled={isSubmitting}
+                    className="group inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium bg-emerald-600 text-white shadow-sm ring-1 ring-emerald-600/20 hover:bg-emerald-700 hover:-translate-y-0.5 hover:shadow-md transition disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <Send className="h-4.5 w-4.5" />
-                    Envoyer la demande
+                    {isSubmitting ? (
+                      <>
+                        <div className="h-4.5 w-4.5 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
+                        Envoi en cours...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-4.5 w-4.5" />
+                        Envoyer la demande
+                      </>
+                    )}
                   </button>
                   <a
                     href="#"
