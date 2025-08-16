@@ -156,7 +156,9 @@ export default function PricingPage() {
 
               <div className="mt-6">
                 <a
-                  href="#"
+                  href="https://cal.com/lucaszubiarrain/30min?overlayCalendar=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex w-full items-center justify-center gap-2 ring-1 hover:-translate-y-0.5 hover:shadow-lg ring-zinc-200 text-sm text-zinc-50 bg-zinc-900 rounded-xl pt-2.5 pr-4 pb-2.5 pl-4 shadow-sm"
                 >
                   <Rocket className="w-6 h-6 text-emerald-300" />
@@ -229,7 +231,9 @@ export default function PricingPage() {
 
               <div className="mt-6">
                 <a
-                  href="#"
+                  href="https://cal.com/lucaszubiarrain/30min?overlayCalendar=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex w-full items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm shadow-sm ring-1 hover:-translate-y-0.5 hover:shadow-emerald-500/10 bg-white text-zinc-900 ring-white/10"
                 >
                   <Rocket className="h-4.5 w-4.5 text-emerald-600" />
@@ -305,7 +309,7 @@ export default function PricingPage() {
 
               <div className="mt-6">
                 <a
-                  href="#"
+                  href="/contact"
                   className="group inline-flex w-full items-center justify-center gap-2 ring-1 hover:-translate-y-0.5 hover:shadow-lg ring-zinc-200 text-sm text-zinc-900 bg-white rounded-xl pt-2.5 pr-4 pb-2.5 pl-4 shadow-sm"
                 >
                   <FileText className="h-4.5 w-4.5 text-zinc-700" />

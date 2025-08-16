@@ -330,7 +330,7 @@ export default function ContactPage() {
                   >
                     J'accepte la
                     <a
-                      href="#"
+                      href="/privacy"
                       className="font-medium text-zinc-800 underline decoration-emerald-400/60 underline-offset-4 hover:text-zinc-900 hover:decoration-emerald-500 transition"
                     >
                       politique de confidentialité

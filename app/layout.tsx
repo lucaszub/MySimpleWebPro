@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ConnectLab — Sites web modernes pour petites entreprises",
+  title: "mysimplewebpro — Sites web modernes pour petites entreprises",
   description:
-    "ConnectLab crée des sites professionnels et minimalistes qui paraissent fiables et sans effort. Axés sur une structure claire, des performances rapides et un design honnête—idéal pour les premiers clients aujourd'hui, évolutif pour les PME demain.",
+    "mysimplewebpro crée des sites professionnels et minimalistes qui paraissent fiables et sans effort. Axés sur une structure claire, des performances rapides et un design honnête—idéal pour les premiers clients aujourd'hui, évolutif pour les PME demain.",
 };
 
 export default function RootLayout({

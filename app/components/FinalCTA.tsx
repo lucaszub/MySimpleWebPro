@@ -18,7 +18,9 @@ export default function FinalCTA() {
             </p>
             <div className="pt-2">
               <a
-                href="#"
+                href="https://cal.com/lucaszubiarrain/30min?overlayCalendar=true"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-xl px-5 py-3 shadow-sm ring-1 bg-zinc-900 text-zinc-50 ring-zinc-900/10 hover:-translate-y-0.5 hover:shadow-lg"
               >
                 <Rocket className="h-5 w-5 text-emerald-300" />

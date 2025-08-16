@@ -176,7 +176,9 @@ export default function About() {
               ref={setAboutRef(11)}
             >
               <a
-                href="#"
+                href="https://cal.com/lucaszubiarrain/30min?overlayCalendar=true"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-xl bg-zinc-900 text-zinc-50 px-5 py-3 shadow-sm ring-1 ring-zinc-900/10 hover:-translate-y-0.5 hover:shadow-lg"
               >
                 <Handshake className="h-5 w-5 text-emerald-300" />
@@ -184,7 +186,7 @@ export default function About() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
               <a
-                href="#"
+                href="/realisations"
                 className="group inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-zinc-900 ring-1 ring-zinc-200 hover:-translate-y-0.5 hover:shadow-md"
               >
                 <CaseSensitive className="h-5 w-5 text-zinc-700" />
@@ -232,14 +234,16 @@ export default function About() {
                 </div>
                 <div className="mt-4 flex items-center gap-2">
                   <a
-                    href="#"
+                    href="https://cal.com/lucaszubiarrain/30min?overlayCalendar=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group inline-flex items-center gap-1.5 rounded-lg bg-zinc-900 text-zinc-50 px-3.5 py-2 text-sm shadow-sm ring-1 ring-zinc-900/10 hover:-translate-y-0.5 hover:shadow-lg"
                   >
                     <CalendarClock className="h-4 w-4 text-emerald-300" />
                     <span className="font-medium">Réserver un créneau</span>
                   </a>
                   <a
-                    href="#"
+                    href="/contact"
                     className="group inline-flex items-center gap-1.5 rounded-lg bg-white px-3.5 py-2 text-sm ring-1 ring-zinc-200 hover:-translate-y-0.5 hover:shadow-md"
                   >
                     <MessageSquare className="h-4 w-4 text-zinc-700" />
