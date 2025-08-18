@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
-import { resend } from "@/app/lib/resend";
+import { getResendClient } from "@/app/lib/resend";
 import { validateContactForm } from "@/app/lib/validation";
 
 export async function POST(request: NextRequest) {
   try {
-    // Vérifier la clé API Resend
-    if (!process.env.RESEND_API_KEY) {
+    // Créer le client Resend dynamiquement
+    const resend = getResendClient();
+    if (!resend) {
       console.error(
         "❌ RESEND_API_KEY manquante dans les variables d'environnement"
       );
@@ -14,8 +15,7 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       );
     }
-
-    console.log("✅ Clé API Resend trouvée");
+    console.log("✅ Client Resend initialisé");
 
     // Parser les données reçues
     const body = await request.json();

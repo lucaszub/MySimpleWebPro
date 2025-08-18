@@ -1,9 +1,21 @@
 import { Resend } from "resend";
 
-// Initialiser l'instance Resend avec la clé API
-// Cette instance est utilisée dans app/api/contact/route.ts pour envoyer des emails
-export const resend = new Resend(process.env.RESEND_API_KEY);
+// Important: ne pas instancier Resend au chargement du module, car Vercel
+// évalue les modules pendant le build. Si la variable d'environnement
+// RESEND_API_KEY n'est pas définie dans l'environnement de build, le
+// constructeur lève une erreur et casse le build.
+//
+// Au lieu de cela, on exporte une fonction qui crée le client à l'exécution.
 
-// Note: Cette instance est utilisée pour :
-// - Envoyer des emails de contact via resend.emails.send()
-// - Gérer l'authentification avec votre clé API
+export function getResendClient(): Resend | null {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    return null;
+  }
+  return new Resend(apiKey);
+}
+
+// Utilisation côté route handler :
+// const resend = getResendClient();
+// if (!resend) { ...return 500 }
+// await resend.emails.send({...})
