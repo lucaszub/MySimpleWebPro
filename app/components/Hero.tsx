@@ -108,7 +108,7 @@ export default function Hero() {
 
             <Badge animation="slow-delayed">Santé & bien-être</Badge>
 
-            <Badge animation="slow">Association / événement</Badge>
+            <Badge animation="slow">Association / événements</Badge>
           </div>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center gap-3">
