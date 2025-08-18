@@ -116,11 +116,11 @@ export default function Hero() {
               href="https://cal.com/lucaszubiarrain/30min?overlayCalendar=true"
               target="_blank"
               rel="noopener noreferrer"
-              className="group reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 shadow-sm ring-1 hover:-translate-y-0.5 hover:shadow-lg bg-emerald-600 text-white ring-emerald-600/20"
+              className="group reveal opacity-0 translate-y-4 blur-[2px] transition-all duration-700 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 shadow-sm ring-1 ring-zinc-900/10 hover:-translate-y-0.5 hover:shadow-lg bg-zinc-900 text-zinc-50"
               data-delay="420"
               ref={setHeroRef(4)}
             >
-              <Calendar className="h-5 w-5 text-emerald-100" />
+              <Calendar className="h-5 w-5 text-emerald-300" />
               <span className="font-medium">Appel gratuit de 30 min</span>
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
