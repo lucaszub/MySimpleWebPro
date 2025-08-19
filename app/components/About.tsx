@@ -91,9 +91,10 @@ export default function About() {
               data-delay="220"
               ref={setAboutRef(2)}
             >
-              J'ai créé ConnectLab suite à un changement de vie à l'étranger,
-              porté par l'envie d'aider les petites entreprises et indépendants
-              à bâtir une présence en ligne simple, fiable et à leur image.
+              J'ai créé Mysimplewebpro suite à un changement de vie à
+              l'étranger, porté par l'envie d'aider les petites entreprises et
+              indépendants à bâtir une présence en ligne simple, fiable et à
+              leur image.
             </p>
 
             <div className="pt-2">
