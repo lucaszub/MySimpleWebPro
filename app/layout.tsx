@@ -36,6 +36,7 @@ export default function RootLayout({
             gtag('config', 'G-V18GH4Z7V6');
           `}
         </Script>
+        <meta name="google-site-verification" content="googlee8acdd7633a3c68c" />
       </head>
       <body
         className={`${inter.variable} antialiased selection:bg-emerald-300 selection:text-zinc-900 bg-zinc-50 text-zinc-900`}
