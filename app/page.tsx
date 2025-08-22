@@ -1,25 +1,26 @@
-import BackgroundAccents from "./components/BackgroundAccents";
+import { Metadata } from "next";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Why from "./components/Why";
-import HowItWorks from "./components/HowItWorks";
 import Features from "./components/Features";
-import Footer from "./components/Footer";
-import About from "./components/About";
-import FinalCTA from "./components/FinalCTA";
+import BackgroundAccents from "./components/BackgroundAccents";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Création de sites web pour PME à Nantes | MySimpleWebPro",
+  description:
+    "Nous accompagnons les PME à Nantes dans la création et refonte de sites internet professionnels. Sites vitrines, e-commerce et SEO local.",
+};
+
+export default function HomePage() {
   return (
     <>
       <BackgroundAccents />
       <Header />
+
+      {/* Hero Section */}
       <Hero />
-      <Why />
-      <HowItWorks />
-      <FinalCTA />
-      {/* <Features /> */}
-      {/* <About /> */}
-      <Footer />
+
+      {/* Features Section */}
+      <Features />
     </>
   );
 }
